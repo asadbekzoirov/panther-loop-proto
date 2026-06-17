@@ -1,0 +1,28 @@
+<!-- @dsCard group="Type" viewport="700x150" name="Price" subtitle="24 / 700 navy — money is always navy & bold" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; background: var(--white); font-family: var(--font-sans); padding: 22px; }
+  .wrap { display: flex; align-items: center; gap: 36px; }
+  .price { font-size: 24px; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; }
+  .earn { font-size: 24px; font-weight: 700; color: var(--gold); letter-spacing: -0.02em; }
+  .note { font-size: 13px; color: var(--text-secondary); max-width: 260px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div>
+    <div class="price">$12</div>
+    <div style="font-size:11px;color:var(--text-tertiary);margin-top:2px">Task budget · navy</div>
+  </div>
+  <div>
+    <div class="earn">+$48</div>
+    <div style="font-size:11px;color:var(--text-tertiary);margin-top:2px">Earnings · gold</div>
+  </div>
+  <p class="note">Every monetary value renders in Navy and bold. Gold is reserved for earnings &amp; accept/earn actions.</p>
+</div>
+</body>
+</html>

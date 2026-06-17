@@ -1,0 +1,5 @@
+/* PantherLoop — Webfonts
+   Inter, loaded from Google Fonts. The official spec calls for Inter (or SF Pro
+   on iOS). On Apple devices the stack in typography.css falls through to SF Pro.
+   NOTE: served from Google Fonts CDN rather than self-hosted binaries. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");

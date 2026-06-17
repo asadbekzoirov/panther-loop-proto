@@ -1,0 +1,27 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Logo & Mark" subtitle="Wordmark + app icon" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; font-family: var(--font-sans); }
+  .wrap { display: flex; }
+  .panel { flex: 1; padding: 28px; display: flex; align-items: center; justify-content: center; gap: 20px; }
+  .light { background: var(--white); }
+  .dark { background: var(--navy); }
+  img { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="panel light">
+    <img src="../assets/app-icon.svg" width="72" height="72" alt="app icon" />
+    <img src="../assets/wordmark.svg" width="200" alt="PantherLoop" />
+  </div>
+  <div class="panel dark">
+    <img src="../assets/wordmark-white.svg" width="200" alt="PantherLoop" />
+  </div>
+</div>
+</body>
+</html>

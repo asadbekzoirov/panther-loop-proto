@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PantherLoop Design System</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--surface); font-family: var(--font-sans); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+
+  /* Hero */
+  .hero { background: var(--navy); color: #fff; padding: 64px 24px 56px; }
+  .hero-inner { max-width: 1080px; margin: 0 auto; }
+  .hero img { display: block; height: 30px; margin-bottom: 28px; }
+  .hero h1 { margin: 0 0 12px; font-size: 38px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; }
+  .hero p { margin: 0; font-size: 16px; line-height: 1.55; max-width: 600px; color: rgba(255,255,255,0.72); }
+  .hero .tag { display: inline-flex; align-items: center; gap: 7px; margin-top: 22px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-light); }
+  .hero .tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+  /* Layout */
+  main { max-width: 1080px; margin: 0 auto; padding: 56px 24px 88px; }
+  section { margin-bottom: 56px; }
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+  .sec-head h2 { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
+  .sec-head span { font-size: 13px; color: var(--text-tertiary); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(232px, 1fr)); gap: 16px; }
+
+  .card { display: flex; flex-direction: column; gap: 6px; background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 20px; box-shadow: 0 1px 3px rgba(11,31,75,.06); transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(11,31,75,.10); border-color: #d7dde8; }
+  .card .name { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; }
+  .card .desc { font-size: 13px; line-height: 1.5; color: var(--text-secondary); }
+  .card .more { margin-top: auto; padding-top: 12px; font-size: 12px; font-weight: 600; color: var(--gold); display: inline-flex; align-items: center; gap: 5px; }
+  .card .more::after { content: "→"; transition: transform 140ms ease; }
+  .card:hover .more::after { transform: translateX(3px); }
+
+  /* Feature row for experience entries */
+  .feature { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .feature .card { padding: 24px; }
+  .feature .card .name { font-size: 18px; }
+  .feature .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-tertiary); }
+
+  footer { max-width: 1080px; margin: 0 auto; padding: 28px 24px 56px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-tertiary); line-height: 1.6; }
+  footer code { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; font-size: 12px; color: var(--text-secondary); }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="assets/wordmark-white.svg" alt="PantherLoop" />
+      <h1>PantherLoop Design System</h1>
+      <p>The all-in-one campus economy for FIU — tokens, components, screens and templates for a verified, students-only marketplace. Mobile-first, built at 390 × 844pt.</p>
+      <span class="tag">Navy + Gold · Inter · iOS &amp; Android</span>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="sec-head"><h2>Foundations</h2><span>Color · Type · Spacing · Brand</span></div>
+      <div class="grid">
+        <a class="card" href="guidelines/colors-brand.card.html"><span class="name">Brand Colors</span><span class="desc">Navy + Gold — the disciplined two-color core.</span><span class="more">View</span></a>
+        <a class="card" href="guidelines/colors-surface.card.html"><span class="name">Surface &amp; Text</span><span class="desc">Cool off-white surfaces and the three-step gray ramp.</span><span class="more">View</span></a>
+        <a class="card" href="guidelines/colors-status.card.html"><span class="name">Status Colors</span><span class="desc">Background/foreground pairs for the six task states.</span><span class="more">View</span></a>
+        <a class="card" href="guidelines/type-scale.card.html"><span class="name">Type Scale</span><span class="desc">Seven steps from Display 32 to Micro 11.</span><span class="more">View</span></a>
+        <a class="card" href="guidelines/type-price.card.html"><span class="name">Price Type</span><span class="desc">The dedicated Price 24/700 navy money token.</span><span class="more">View</span></a>
+        <a class="card" href="guidelines/spacing-scale.card.html"><span class="name">Spacing</span><span class="desc">8 / 12 / 16 element gaps, 24 section, 16 screen padding.</span><span class="more">View</span></a>
+        <a class="card" href="guidelines/radius-elevation.card.html"><span class="name">Radius &amp; Elevation</span><span class="desc">Corner radii and the soft navy-tinted shadow ramp.</span><span class="more">View</span></a>
+        <a class="card" href="guidelines/brand-logo.card.html"><span class="name">Brand &amp; Logo</span><span class="desc">The loop-ring + PL lettermark and wordmarks.</span><span class="more">View</span></a>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><h2>Components</h2><span>9 React primitives</span></div>
+      <div class="grid">
+        <a class="card" href="components/core/core.card.html"><span class="name">Core</span><span class="desc">Button, StatusBadge, Avatar.</span><span class="more">View</span></a>
+        <a class="card" href="components/content/content.card.html"><span class="name">Content</span><span class="desc">CategoryPill, TaskCard — the task feed.</span><span class="more">View</span></a>
+        <a class="card" href="components/forms/forms.card.html"><span class="name">Forms</span><span class="desc">Labeled Input with icon, prefix, textarea.</span><span class="more">View</span></a>
+        <a class="card" href="components/navigation/navigation.card.html"><span class="name">Navigation</span><span class="desc">BottomNav, TopAppBar.</span><span class="more">View</span></a>
+        <a class="card" href="components/icons/icons.card.html"><span class="name">Icons</span><span class="desc">Tintable Lucide line-icon system.</span><span class="more">View</span></a>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><h2>Experience</h2><span>Live screens &amp; starting templates</span></div>
+      <div class="feature">
+        <a class="card" href="ui_kits/pantherloop_app/index.html"><span class="eyebrow">UI Kit</span><span class="name">PantherLoop App — 8 screens</span><span class="desc">Interactive iOS click-through: onboarding, home feed, task details, post, chat with proof upload, profile, rides map, and PantherPay.</span><span class="more">Open gallery</span></a>
+        <a class="card" href="templates/home-feed/HomeFeed.dc.html"><span class="eyebrow">Template</span><span class="name">Home Feed</span><span class="desc">Starting point for the task feed screen, wired to the component library.</span><span class="more">Open template</span></a>
+        <a class="card" href="templates/signup-onboarding/SignupOnboarding.dc.html"><span class="eyebrow">Template</span><span class="name">Signup &amp; Onboarding</span><span class="desc">The FIU email gate and selfie verification flow.</span><span class="more">Open template</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    PantherLoop Design System · The all-in-one campus economy for FIU. Foundations link <code>styles.css</code>; components read <code>window.PantherLoopDesignSystem_4d00e2</code> from <code>_ds_bundle.js</code>. Not an official FIU app.
+  </footer>
+</body>
+</html>

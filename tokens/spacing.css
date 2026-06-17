@@ -1,0 +1,24 @@
+/* PantherLoop — Spacing & Layout Tokens */
+:root {
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;    /* element gap (tight) */
+  --space-12: 12px;  /* element gap (default) */
+  --space-16: 16px;  /* element gap (loose) / screen padding */
+  --space-24: 24px;  /* section gap */
+  --space-32: 32px;
+
+  --screen-padding: 16px;       /* horizontal screen padding */
+  --section-gap: 24px;
+  --card-padding-y: 14px;
+  --card-padding-x: 16px;
+
+  --bottom-nav-height: 56px;    /* + safe-area inset */
+  --button-height: 48px;
+  --input-height: 44px;
+  --top-bar-height: 56px;
+
+  /* Device frame (iPhone 14 base) */
+  --frame-width: 390px;
+  --frame-height: 844px;
+}

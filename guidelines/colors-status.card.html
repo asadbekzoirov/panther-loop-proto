@@ -1,0 +1,23 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Status" subtitle="Six task lifecycle bg/fg pairs" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; background: var(--white); font-family: var(--font-sans); padding: 20px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .badge { display: inline-flex; align-items: center; height: 30px; padding: 0 14px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="row">
+  <span class="badge" style="background: var(--status-open-bg); color: var(--status-open-fg)">Open</span>
+  <span class="badge" style="background: var(--status-progress-bg); color: var(--status-progress-fg)">In Progress</span>
+  <span class="badge" style="background: var(--status-confirmed-bg); color: var(--status-confirmed-fg)">Confirmed</span>
+  <span class="badge" style="background: var(--status-disputed-bg); color: var(--status-disputed-fg)">Disputed</span>
+  <span class="badge" style="background: var(--status-cancelled-bg); color: var(--status-cancelled-fg)">Cancelled</span>
+  <span class="badge" style="background: var(--status-expired-bg); color: var(--status-expired-fg)">Expired</span>
+</div>
+</body>
+</html>

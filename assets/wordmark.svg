@@ -1,0 +1,8 @@
+<svg width="220" height="48" viewBox="0 0 220 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PantherLoop">
+  
+  <rect x="0" y="6" width="36" height="36" rx="9" fill="#0B1F4B"></rect>
+  <circle cx="18" cy="24" r="10.5" stroke="#B6862C" stroke-width="2.6" fill="none" stroke-dasharray="46 20" stroke-linecap="round" transform="rotate(-35 18 24)"></circle>
+  <text x="18" y="25" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">PL</text>
+  
+  <text x="48" y="25" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-size="21" font-weight="600" fill="#0B1F4B" letter-spacing="-0.6">Panther<tspan fill="#B6862C">Loop</tspan></text>
+</svg>

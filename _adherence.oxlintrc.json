@@ -1,0 +1,317 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/content/**",
+              "components/core/**",
+              "components/forms/**",
+              "components/icons/**",
+              "components/navigation/**",
+              "ui_kits/pantherloop_app/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Inter))/i]",
+        "message": "Font not provided by the design system. Available: Inter."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Avatar'] > JSXAttribute > JSXIdentifier[name!=/^(?:initials|src|size|tier|key|ref|className|style|children)$/]",
+        "message": "<Avatar> doesn't accept that prop. Declared props: initials, src, size, tier."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Avatar'] > JSXAttribute[name.name='tier'] > Literal[value!=/^(?:none|helper|driver)$/]",
+        "message": "<Avatar> tier must be one of 'none' | 'helper' | 'driver'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='NavTab'] > JSXAttribute > JSXIdentifier[name!=/^(?:key|icon|label|fab|key|ref|className|style|children)$/]",
+        "message": "<NavTab> doesn't accept that prop. Declared props: key, icon, label, fab."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|iconLeft|iconRight|fullWidth|disabled|children|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, size, iconLeft, iconRight, fullWidth, disabled, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|accept|secondary|ghost)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'accept' | 'secondary' | 'ghost'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:lg|md|sm)$/]",
+        "message": "<Button> size must be one of 'lg' | 'md' | 'sm'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CategoryPill'] > JSXAttribute > JSXIdentifier[name!=/^(?:active|children|key|ref|className|style|children)$/]",
+        "message": "<CategoryPill> doesn't accept that prop. Declared props: active, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|color|key|ref|className|style|children)$/]",
+        "message": "<Icon> doesn't accept that prop. Declared props: name, size, color."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Input'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|placeholder|iconLeft|prefix|multiline|rows|disabled|key|ref|className|style|children)$/]",
+        "message": "<Input> doesn't accept that prop. Declared props: label, placeholder, iconLeft, prefix, multiline, rows, disabled."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StatusBadge'] > JSXAttribute > JSXIdentifier[name!=/^(?:status|label|key|ref|className|style|children)$/]",
+        "message": "<StatusBadge> doesn't accept that prop. Declared props: status, label."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TaskCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|status|location|category|deadline|description|posterName|posterInitials|posterTier|rating|price|key|ref|className|style|children)$/]",
+        "message": "<TaskCard> doesn't accept that prop. Declared props: title, status, location, category, deadline, description, posterName, posterInitials, posterTier, rating, price."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TaskCard'] > JSXAttribute[name.name='posterTier'] > Literal[value!=/^(?:none|helper|driver)$/]",
+        "message": "<TaskCard> posterTier must be one of 'none' | 'helper' | 'driver'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TopAppBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|align|onBack|right|rightInitials|badge|onRight|key|ref|className|style|children)$/]",
+        "message": "<TopAppBar> doesn't accept that prop. Declared props: title, align, onBack, right, rightInitials, badge, onRight."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TopAppBar'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center)$/]",
+        "message": "<TopAppBar> align must be one of 'left' | 'center'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TopAppBar'] > JSXAttribute[name.name='right'] > Literal[value!=/^(?:none|bell|avatar)$/]",
+        "message": "<TopAppBar> right must be one of 'none' | 'bell' | 'avatar'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Avatar": {
+        "replaces": []
+      },
+      "NavTab": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "CategoryPill": {
+        "replaces": []
+      },
+      "Icon": {
+        "replaces": []
+      },
+      "Input": {
+        "replaces": []
+      },
+      "StatusBadge": {
+        "replaces": []
+      },
+      "TaskCard": {
+        "replaces": []
+      },
+      "TopAppBar": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--accent-hover",
+      "--bg-card",
+      "--bg-input",
+      "--bg-screen",
+      "--border",
+      "--bottom-nav-height",
+      "--button-height",
+      "--card-padding-x",
+      "--card-padding-y",
+      "--font-sans",
+      "--frame-height",
+      "--frame-width",
+      "--gold",
+      "--gold-light",
+      "--hairline",
+      "--header-bg",
+      "--input-height",
+      "--navy",
+      "--navy-mid",
+      "--price",
+      "--radius-card",
+      "--radius-control",
+      "--radius-full",
+      "--radius-pill",
+      "--radius-sheet",
+      "--screen-padding",
+      "--section-gap",
+      "--shadow-card",
+      "--shadow-nav",
+      "--shadow-raised",
+      "--shadow-sheet",
+      "--space-12",
+      "--space-16",
+      "--space-2",
+      "--space-24",
+      "--space-32",
+      "--space-4",
+      "--space-8",
+      "--status-cancelled-bg",
+      "--status-cancelled-fg",
+      "--status-confirmed-bg",
+      "--status-confirmed-fg",
+      "--status-disputed-bg",
+      "--status-disputed-fg",
+      "--status-expired-bg",
+      "--status-expired-fg",
+      "--status-open-bg",
+      "--status-open-fg",
+      "--status-progress-bg",
+      "--status-progress-fg",
+      "--surface",
+      "--text-primary",
+      "--text-secondary",
+      "--text-tertiary",
+      "--top-bar-height",
+      "--tracking-normal",
+      "--tracking-tight",
+      "--tracking-wide",
+      "--type-body-lh",
+      "--type-body-size",
+      "--type-body-weight",
+      "--type-caption-lh",
+      "--type-caption-size",
+      "--type-caption-weight",
+      "--type-display-lh",
+      "--type-display-size",
+      "--type-display-weight",
+      "--type-h1-lh",
+      "--type-h1-size",
+      "--type-h1-weight",
+      "--type-h2-lh",
+      "--type-h2-size",
+      "--type-h2-weight",
+      "--type-micro-lh",
+      "--type-micro-size",
+      "--type-micro-weight",
+      "--type-price-lh",
+      "--type-price-size",
+      "--type-price-weight",
+      "--white"
+    ],
+    "tokenKinds": {
+      "--navy": "color",
+      "--navy-mid": "color",
+      "--gold": "color",
+      "--gold-light": "color",
+      "--surface": "color",
+      "--white": "color",
+      "--text-primary": "font",
+      "--text-secondary": "font",
+      "--text-tertiary": "font",
+      "--border": "color",
+      "--status-open-bg": "color",
+      "--status-open-fg": "color",
+      "--status-progress-bg": "color",
+      "--status-progress-fg": "color",
+      "--status-confirmed-bg": "color",
+      "--status-confirmed-fg": "color",
+      "--status-disputed-bg": "color",
+      "--status-disputed-fg": "color",
+      "--status-cancelled-bg": "color",
+      "--status-cancelled-fg": "color",
+      "--status-expired-bg": "color",
+      "--status-expired-fg": "color",
+      "--bg-screen": "color",
+      "--bg-card": "color",
+      "--bg-input": "color",
+      "--accent": "color",
+      "--accent-hover": "color",
+      "--price": "color",
+      "--header-bg": "color",
+      "--font-sans": "font",
+      "--type-display-size": "font",
+      "--type-display-lh": "font",
+      "--type-display-weight": "font",
+      "--type-h1-size": "font",
+      "--type-h1-lh": "font",
+      "--type-h1-weight": "font",
+      "--type-h2-size": "font",
+      "--type-h2-lh": "font",
+      "--type-h2-weight": "font",
+      "--type-body-size": "font",
+      "--type-body-lh": "font",
+      "--type-body-weight": "font",
+      "--type-caption-size": "font",
+      "--type-caption-lh": "font",
+      "--type-caption-weight": "font",
+      "--type-micro-size": "font",
+      "--type-micro-lh": "font",
+      "--type-micro-weight": "font",
+      "--type-price-size": "font",
+      "--type-price-lh": "font",
+      "--type-price-weight": "font",
+      "--tracking-tight": "font",
+      "--tracking-normal": "font",
+      "--tracking-wide": "font",
+      "--space-2": "spacing",
+      "--space-4": "spacing",
+      "--space-8": "spacing",
+      "--space-12": "spacing",
+      "--space-16": "spacing",
+      "--space-24": "spacing",
+      "--space-32": "spacing",
+      "--screen-padding": "spacing",
+      "--section-gap": "spacing",
+      "--card-padding-y": "spacing",
+      "--card-padding-x": "spacing",
+      "--bottom-nav-height": "spacing",
+      "--button-height": "spacing",
+      "--input-height": "spacing",
+      "--top-bar-height": "spacing",
+      "--frame-width": "spacing",
+      "--frame-height": "spacing",
+      "--radius-pill": "radius",
+      "--radius-control": "radius",
+      "--radius-card": "radius",
+      "--radius-sheet": "radius",
+      "--radius-full": "radius",
+      "--hairline": "spacing",
+      "--shadow-card": "shadow",
+      "--shadow-raised": "shadow",
+      "--shadow-sheet": "shadow",
+      "--shadow-nav": "shadow"
+    },
+    "fontFamilies": [
+      "Inter"
+    ]
+  }
+}

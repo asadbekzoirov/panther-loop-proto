@@ -1,0 +1,31 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Surface & Text" subtitle="Backgrounds, hairline, text ramp" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; background: var(--white); font-family: var(--font-sans); padding: 18px; }
+  .wrap { display: flex; gap: 26px; align-items: center; }
+  .swatches { display: flex; gap: 12px; }
+  .sw { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 11px; color: var(--text-secondary); }
+  .chip { width: 56px; height: 56px; border-radius: 12px; border: 1px solid var(--border); }
+  .text-ramp { display: flex; flex-direction: column; gap: 4px; }
+  .text-ramp div { font-size: 15px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background: var(--surface)"></div>Surface<br>#F4F6FA</div>
+    <div class="sw"><div class="chip" style="background: var(--white)"></div>White<br>#FFFFFF</div>
+    <div class="sw"><div class="chip" style="background: var(--surface); border: 1px solid var(--border)"></div>Border<br>#E5E7EB</div>
+  </div>
+  <div class="text-ramp">
+    <div style="color: var(--text-primary); font-weight:600">Text Primary · #111827</div>
+    <div style="color: var(--text-secondary)">Text Secondary · #6B7280</div>
+    <div style="color: var(--text-tertiary)">Text Tertiary · #9CA3AF</div>
+  </div>
+</div>
+</body>
+</html>

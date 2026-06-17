@@ -1,0 +1,16 @@
+/* PantherLoop — Radius & Shadow Tokens */
+:root {
+  --radius-pill: 20px;     /* pills / badges (fully rounded) */
+  --radius-control: 10px;  /* inputs / buttons */
+  --radius-card: 16px;     /* cards */
+  --radius-sheet: 24px;    /* modals / bottom sheets (top corners) */
+  --radius-full: 9999px;   /* avatars / circles */
+
+  --hairline: 0.5px;
+
+  /* Elevation — soft, navy-tinted shadows */
+  --shadow-card: 0 1px 3px rgba(11, 31, 75, 0.06), 0 1px 2px rgba(11, 31, 75, 0.04);
+  --shadow-raised: 0 4px 16px rgba(11, 31, 75, 0.10);
+  --shadow-sheet: 0 -8px 32px rgba(11, 31, 75, 0.16);
+  --shadow-nav: 0 -1px 0 var(--border);
+}

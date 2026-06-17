@@ -1,0 +1,37 @@
+/* PantherLoop — Color Tokens */
+:root {
+  /* Brand */
+  --navy: #0B1F4B;        /* headers, primary buttons, active nav, prices */
+  --navy-mid: #1A3A6B;    /* secondary surfaces, dark cards */
+  --gold: #B6862C;        /* CTA accent, accept buttons, earnings, highlights */
+  --gold-light: #D4A843;  /* hover states, icon tints */
+
+  /* Surfaces */
+  --surface: #F4F6FA;     /* screen background, input fills */
+  --white: #FFFFFF;       /* cards, bottom sheets */
+
+  /* Text */
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --text-tertiary: #9CA3AF;
+
+  /* Lines */
+  --border: #E5E7EB;      /* 0.5pt hairlines */
+
+  /* Status badges — background + foreground pairs */
+  --status-open-bg: #E6F9F0;        --status-open-fg: #0A6640;
+  --status-progress-bg: #E6F0FB;    --status-progress-fg: #0C447C;
+  --status-confirmed-bg: #F0E6FB;   --status-confirmed-fg: #3C3489;
+  --status-disputed-bg: #FAEEDA;    --status-disputed-fg: #633806;
+  --status-cancelled-bg: #FCEBEB;   --status-cancelled-fg: #501313;
+  --status-expired-bg: #F3F4F6;     --status-expired-fg: #6B7280;
+
+  /* Semantic aliases */
+  --bg-screen: var(--surface);
+  --bg-card: var(--white);
+  --bg-input: var(--surface);
+  --accent: var(--gold);
+  --accent-hover: var(--gold-light);
+  --price: var(--navy);
+  --header-bg: var(--navy);
+}

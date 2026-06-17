@@ -1,0 +1,17 @@
+/* PantherLoop — Typography Tokens */
+:root {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+
+  /* Type scale — size / line-height / weight (mobile, pt≈px) */
+  --type-display-size: 32px;   --type-display-lh: 38px;   --type-display-weight: 600; /* app title, onboarding hero */
+  --type-h1-size: 22px;        --type-h1-lh: 28px;        --type-h1-weight: 600;       /* screen titles */
+  --type-h2-size: 17px;        --type-h2-lh: 22px;        --type-h2-weight: 600;       /* section headers, card titles */
+  --type-body-size: 15px;      --type-body-lh: 21px;      --type-body-weight: 400;     /* descriptions, list items */
+  --type-caption-size: 13px;   --type-caption-lh: 18px;   --type-caption-weight: 400;  /* meta info, timestamps */
+  --type-micro-size: 11px;     --type-micro-lh: 14px;     --type-micro-weight: 400;    /* badges, tab labels */
+  --type-price-size: 24px;     --type-price-lh: 28px;     --type-price-weight: 700;    /* budgets, earnings (navy) */
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+}
